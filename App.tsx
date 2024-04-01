@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { ImageBackground, StyleSheet } from "react-native";
+import WelcomeScreen from "./app/screen/WelcomScreen";
+import SignUpScreen from "./app/screen/SignUpScreen";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ImageBackground
+      style={styles.background}
+      source={require("./app/assets/background.jpg")}
+    >
+      <SignUpScreen />
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  background: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+    resizeMode: "cover",
   },
 });
