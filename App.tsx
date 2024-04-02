@@ -1,5 +1,7 @@
 import React from "react";
 import { ImageBackground, StyleSheet } from "react-native";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 import WelcomeScreen from "./app/screen/WelcomScreen";
 import SignUpScreen from "./app/screen/SignUpScreen";
 
