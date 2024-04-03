@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
 
   signUpContainer: {},
   welcomeText: {
+    fontFamily: "SpaceGrotesk_700Bold",
     fontSize: 24,
     fontWeight: "bold",
     color: colors.primary,

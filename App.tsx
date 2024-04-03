@@ -1,9 +1,9 @@
 import React from "react";
 import { ImageBackground, StyleSheet } from "react-native";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import WelcomeScreen from "./app/screen/WelcomScreen";
-import SignUpScreen from "./app/screen/SignUpScreen";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import SignUpScreen from "./app/screens/SignUpScreen";
 
 export default function App() {
   return (
@@ -11,7 +11,7 @@ export default function App() {
       style={styles.background}
       source={require("./app/assets/background.jpg")}
     >
-      <SignUpScreen />
+      <WelcomeScreen />
     </ImageBackground>
   );
 }

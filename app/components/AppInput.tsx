@@ -1,5 +1,9 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import {
+  useFonts,
+  SpaceGrotesk_400Regular,
+} from "@expo-google-fonts/space-grotesk";
 
 import colors from "../config/Colors";
 
@@ -8,6 +12,14 @@ interface AppInputProps {
 }
 
 function AppInput({ label }: AppInputProps) {
+  const [fontsLoaded] = useFonts({
+    SpaceGrotesk_400Regular,
+  });
+
+  if (!fontsLoaded) {
+    console.log("not found")
+    return null; 
+  }
   return (
     <View style={styles.inputContainer}>
       <Text style={styles.inputText}>{label}</Text>
@@ -18,8 +30,8 @@ function AppInput({ label }: AppInputProps) {
 const styles = StyleSheet.create({
   inputContainer: {
     backgroundColor: "transparent",
-    width: 220,
-    height: 34,
+    width: 200,
+    height: 44,
     borderRadius: 10,
     display: "flex",
     justifyContent: "center",
@@ -28,8 +40,9 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   inputText: {
+    fontFamily: 'SpaceGrotesk_400Regular',
+    fontSize: 14,
     color: colors.primary,
-    fontWeight: "500",
     marginLeft: 20,
   },
 });

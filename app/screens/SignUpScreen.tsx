@@ -1,5 +1,9 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import {
+  useFonts,
+  SpaceGrotesk_700Bold
+} from "@expo-google-fonts/space-grotesk";
 
 import colors from "../config/Colors"
 import AppButton from "../components/AppButton";
@@ -7,10 +11,18 @@ import AppImage from "../components/AppImage";
 import AppInput from "../components/AppInput";
 
 function SignUpScreen() {
+  const [fontsLoaded] = useFonts({
+    SpaceGrotesk_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    console.log("not found");
+    return null;
+  }
   return (
     <View style={styles.container}>
       <AppImage />
-      <View style={styles.signUpContainer}>
+      <View>
         <Text style={styles.welcomeText}>CREATE ACCOUNT</Text>
         <AppInput label="Email" />
         <AppInput label="Password" />
@@ -25,11 +37,11 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 80,
     alignItems: "center",
+    justifyContent: "center",
   },
-  
-  signUpContainer: {},
   welcomeText: {
-    fontSize: 24,
+    fontFamily: 'SpaceGrotesk_700Bold',
+    fontSize: 28,
     fontWeight: "bold",
     color: colors.primary,
     marginBottom: 10,

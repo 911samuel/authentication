@@ -1,13 +1,26 @@
 import React from "react";
-import { Image, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import {
+  useFonts,
+  SpaceGrotesk_700Bold,
+} from "@expo-google-fonts/space-grotesk";
 
 import colors from "../config/Colors";
+import AppImage from "../components/AppImage";
 import AppButton from "../components/AppButton";
 
-function WelcomScreen() {
+function WelcomeScreen() {
+  const [fontsLoaded] = useFonts({
+    SpaceGrotesk_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    console.log("not found");
+    return null;
+  }
   return (
     <View style={styles.container}>
-      
+      <AppImage />
       <Text style={styles.welcomeText}>WELCOME TO ONCREATION</Text>
       <AppButton title={"SIGN UP"} />
       <AppButton title={"LOGIN"} />
@@ -19,15 +32,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   welcomeText: {
-    fontSize: 30,
+    fontFamily: "SpaceGrotesk_700Bold",
+    fontSize: 28,
     fontWeight: "bold",
     color: colors.primary,
     marginBottom: 70,
   },
- 
 });
 
-export default WelcomScreen;
+export default WelcomeScreen;
