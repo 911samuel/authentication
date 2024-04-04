@@ -33,11 +33,11 @@ const styles = StyleSheet.create({
     backgroundColor: colors.accent,
     width: 200,
     height: 44,
-    borderRadius: 10,
+    borderRadius: 20,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 50,
+    marginBottom: 70,
   },
   buttonText: {
     fontFamily: "SpaceGrotesk_500Medium",

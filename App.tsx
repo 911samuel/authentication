@@ -1,9 +1,10 @@
 import React from "react";
-import { ImageBackground, StyleSheet } from "react-native";
+import { ImageBackground, StyleSheet, StatusBar } from "react-native"; // Import StatusBar
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 import SignUpScreen from "./app/screens/SignUpScreen";
+import SIgnInScreen from "./app/screens/SignInScreen";
 
 export default function App() {
   return (
@@ -11,7 +12,10 @@ export default function App() {
       style={styles.background}
       source={require("./app/assets/background.jpg")}
     >
-      <WelcomeScreen />
+      <StatusBar barStyle="light-content" /> 
+      {/* <WelcomeScreen /> */}
+      {/* < SignUpScreen /> */}
+      < SIgnInScreen />
     </ImageBackground>
   );
 }
@@ -22,5 +26,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     resizeMode: "cover",
+    paddingTop: StatusBar.currentHeight || 0, 
   },
 });

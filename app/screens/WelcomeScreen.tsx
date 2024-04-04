@@ -8,20 +8,33 @@ import {
 import colors from "../config/Colors";
 import AppImage from "../components/AppImage";
 import AppButton from "../components/AppButton";
+import AppHeading from "../components/AppHeading";
+import { useNavigation } from "@react-navigation/native";
 
 function WelcomeScreen() {
   const [fontsLoaded] = useFonts({
     SpaceGrotesk_700Bold,
   });
 
+  // const navigation = useNavigation();
+
+  // const handleSignUp = () => {
+  //   navigation.navigate("SignUp");
+  // };
+
+  // const handleLogin = () => {
+  //   navigation.navigate("SignIn");
+  // };
+
   if (!fontsLoaded) {
     console.log("not found");
     return null;
   }
+
   return (
     <View style={styles.container}>
       <AppImage />
-      <Text style={styles.welcomeText}>WELCOME TO ONCREATION</Text>
+      < AppHeading />
       <AppButton title={"SIGN UP"} />
       <AppButton title={"LOGIN"} />
     </View>
@@ -32,14 +45,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
-  },
-  welcomeText: {
-    fontFamily: "SpaceGrotesk_700Bold",
-    fontSize: 28,
-    fontWeight: "bold",
-    color: colors.primary,
-    marginBottom: 70,
+    marginBottom: 123,
   },
 });
 

@@ -5,6 +5,7 @@ import colors from "../config/Colors";
 import AppButton from "../components/AppButton";
 import AppImage from "../components/AppImage";
 import AppInput from "../components/AppInput";
+import SignUpScreen from './SignUpScreen';
 
 function SIgnInScreen() {
     return (
@@ -14,7 +15,7 @@ function SIgnInScreen() {
           <Text style={styles.welcomeText}>LOGIN ACCOUNT</Text>
           <AppInput label="Email" />
           <AppInput label="Password" />
-          <AppButton title="LOGIN" />
+          <AppButton title="LOGIN" onPress={() => { <  SignUpScreen /> } }/>
         </View>
       </View>
     );
@@ -23,7 +24,6 @@ function SIgnInScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 80,
     alignItems: "center",
   },
 

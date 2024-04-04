@@ -35,9 +35,7 @@ function SignUpScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 80,
     alignItems: "center",
-    justifyContent: "center",
   },
   welcomeText: {
     fontFamily: 'SpaceGrotesk_700Bold',
