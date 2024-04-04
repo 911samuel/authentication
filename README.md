@@ -65,19 +65,20 @@ Importance of implementing security measures like HTTPS, session management, and
 
 
 <div style="display: flex; flex-direction: row;">
-  <div style="flex: 1;">
-    <img alt="./app/assets/Welcome.jpeg" src="./app/assets/Welcome.jpeg" style="width: 300px; height: 400px;"><br>
-    <p style="text-align: left;">Mobile view of Home screen of the app</p>
+  <div style="flex: 1; text-align: left;">
+    <img alt="Home Screen" src="./app/assets/Welcome.jpeg" style="width: 300px; height: 500px;"><br>
+    <p>Mobile view of Home screen of the app</p>
   </div>
-  <div style="flex: 1;">
-    <img alt="./app/assets/Signup.jpeg" src="./app/assets/Signup.jpeg" style="width: 300px; height: 400px;"><br>
-    <p style="text-align: center;">Mobile view of Signup screen of the app</p>
+  <div style="flex: 1; text-align: center;">
+    <img alt="Signup Screen" src="./app/assets/Signup.jpeg" style="width: 300px; height: 400px;"><br>
+    <p>Mobile view of Signup screen of the app</p>
   </div>
-  <div style="flex: 1;">
-    <img alt="./app/assets/Login.jpeg" src="./app/assets/Login.jpeg" style="width: 300px; height: 400px;"><br>
-    <p style="text-align: right;">Mobile view of Login screen of the app</p>
+  <div style="flex: 1; text-align: right;">
+    <img alt="Login Screen" src="./app/assets/Login.jpeg" style="width: 300px; height: 400px;"><br>
+    <p>Mobile view of Login screen of the app</p>
   </div>
 </div>
+
 
 
 
