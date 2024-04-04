@@ -1,7 +1,8 @@
 const Colors = {
   primary: "#fff",
-  accent: "#007EB3",
   neutral: "#808080",
+  primaryButton: "#007EB3",
+  secondaryButoon: "tomato"
 };
 
 export default Colors;

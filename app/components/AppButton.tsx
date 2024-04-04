@@ -1,28 +1,43 @@
-import React from 'react';
+import React from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import {
   useFonts,
-  SpaceGrotesk_500Medium
+  SpaceGrotesk_500Medium,
 } from "@expo-google-fonts/space-grotesk";
 
-import colors from "../config/Colors"
+import colors from "../config/Colors";
 
 interface AppButtonProps {
-  title: String;
+  title: string;
   onPress?: () => void;
+  marginTop?: number;
+  marginBottom?: number;
+  backgroundColor?: string;
 }
 
-function AppButton({ title, onPress }: AppButtonProps) {
-  const [fontsLoaded] = useFonts({
-    SpaceGrotesk_500Medium
-  });
+function AppButton({
+  title,
+  onPress,
+  marginTop= 0,
+  marginBottom = 0,
+  backgroundColor,
+}: AppButtonProps) {
+  const [fontsLoaded] = useFonts({ SpaceGrotesk_500Medium });
+
+  const buttonContainerStyle = {
+    marginBottom,
+    marginTop,
+    backgroundColor: backgroundColor || colors.primaryButton,
+    ...styles.buttonContainer,
+  };
 
   if (!fontsLoaded) {
-    console.log("not found");
+    console.log("Font not loaded");
     return null;
   }
+
   return (
-    <TouchableOpacity onPress={onPress} style={styles.buttonContainer}>
+    <TouchableOpacity onPress={onPress} style={buttonContainerStyle}>
       <Text style={styles.buttonText}>{title}</Text>
     </TouchableOpacity>
   );
@@ -30,14 +45,11 @@ function AppButton({ title, onPress }: AppButtonProps) {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    backgroundColor: colors.accent,
     width: 200,
     height: 44,
     borderRadius: 20,
-    display: "flex",
-    justifyContent: "center",
     alignItems: "center",
-    marginBottom: 70,
+    justifyContent: "center",
   },
   buttonText: {
     fontFamily: "SpaceGrotesk_500Medium",

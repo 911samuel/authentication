@@ -10,6 +10,7 @@ import AppImage from "../components/AppImage";
 import AppButton from "../components/AppButton";
 import AppHeading from "../components/AppHeading";
 import { useNavigation } from "@react-navigation/native";
+import AppContainer from "../components/AppContainer";
 
 function WelcomeScreen() {
   const [fontsLoaded] = useFonts({
@@ -32,21 +33,17 @@ function WelcomeScreen() {
   }
 
   return (
-    <View style={styles.container}>
-      <AppImage />
-      < AppHeading />
-      <AppButton title={"SIGN UP"} />
-      <AppButton title={"LOGIN"} />
-    </View>
+    <AppContainer>
+      <AppImage image={require("../assets/shopping-cart.png")} />
+      <AppHeading
+        title="WELCOME TO ON_CREATION"
+        fontSize={28} 
+        width={228}
+      />
+      <AppButton title={"SIGN UP"} marginBottom={40} />
+      <AppButton title={"LOGIN"} backgroundColor="tomato"/>
+    </AppContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    marginBottom: 123,
-  },
-});
 
 export default WelcomeScreen;

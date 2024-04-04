@@ -1,39 +1,61 @@
-import React from 'react';
-import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { Text, View, StyleSheet, Image } from "react-native";
 
-import colors from "../config/Colors";
 import AppButton from "../components/AppButton";
 import AppImage from "../components/AppImage";
 import AppInput from "../components/AppInput";
-import SignUpScreen from './SignUpScreen';
+import AppHeading from "../components/AppHeading";
+import AppContainer from "../components/AppContainer";
+import colors from "../config/Colors";
 
 function SIgnInScreen() {
-    return (
-      <View style={styles.container}>
-        <AppImage />
-        <View style={styles.signUpContainer}>
-          <Text style={styles.welcomeText}>LOGIN ACCOUNT</Text>
-          <AppInput label="Email" />
-          <AppInput label="Password" />
-          <AppButton title="LOGIN" onPress={() => { <  SignUpScreen /> } }/>
-        </View>
+  return (
+    <AppContainer>
+      <AppImage image={require("../assets/shopping-cart.png")} />
+      <AppHeading title="LOGIN ACCOUNT" marginBottom={30} width={220} />
+      <View style={styles.login}>
+        <AppInput label="Email" />
+        <AppInput label="Password" marginBottom={10} />
+        <Text style={styles.forgot}>forgot password?</Text>
       </View>
-    );
+      <AppButton title="LOGIN" />
+      <Text style={styles.loginWith}>or Login with</Text>
+      <view style={styles.socialMediaIcons}>
+        <Image style={styles.icon} source={require("../assets/google.png")} />
+        <Image style={styles.icon} source={require("../assets/facebook.png")} />
+        <Image style={styles.icon} source={require("../assets/apple.png")} />
+      </view>
+    </AppContainer>
+  );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-  },
-
-  signUpContainer: {},
-  welcomeText: {
-    fontFamily: "SpaceGrotesk_700Bold",
-    fontSize: 24,
-    fontWeight: "bold",
+  forgot: {
+    fontSize: 14,
+    textAlign: "right",
     color: colors.primary,
-    marginBottom: 10,
+    marginBottom: 30,
+  },
+  login: {
+    width: 200,
+  },
+  loginWith: {
+    alignSelf: "center",
+    color: colors.primary,
+    fontSize: 18,
+    marginTop: 20,
+  },
+  socialMediaIcons: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 20,
+    width: 200,
+  },
+  icon: {
+    width: 50,
+    height: 50,
   },
 });
 

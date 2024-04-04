@@ -1,21 +1,20 @@
-import React from 'react';
+import React from "react";
 import { Image, StyleSheet } from "react-native";
 
-
-function AppImage() {
-    return (
-      <Image
-        style={styles.logo}
-        source={require("../assets/shopping-cart.png")}
-      />
-    );
+interface AppImageProps {
+  image: any; 
 }
+
+const AppImage: React.FC<AppImageProps> = ({ image }) => {
+  return <Image style={styles.logo} source={image} />;
+};
 
 const styles = StyleSheet.create({
   logo: {
     width: 150,
     height: 150,
-    marginBottom: 76,
+    marginBottom: 70,
+    marginTop: 123,
   },
 });
 

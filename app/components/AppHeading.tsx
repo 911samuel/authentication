@@ -1,20 +1,36 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { Text, StyleSheet, TextStyle } from "react-native";
 
 import colors from "../config/Colors";
 
-function AppHeading() {
-  return <Text style={styles.welcomeText}>WELCOME TO ON_CREATION</Text>;
+interface AppHeadingProps {
+  title: string;
+  fontSize?: number;
+  marginBottom?: number;
+  width?: number;
+}
+
+function AppHeading({
+  title,
+  fontSize = 24,
+  width = 200,
+  marginBottom = 50,
+}: AppHeadingProps) {
+  const headingStyles = {
+    fontSize,
+    width,
+    marginBottom,
+    ...styles.welcomeText,
+  };
+
+  return <Text style={headingStyles}>{title}</Text>;
 }
 
 const styles = StyleSheet.create({
   welcomeText: {
-    width: 220,
     fontFamily: "SpaceGrotesk_700Bold",
-    fontSize: 28,
     fontWeight: "bold",
     color: colors.primary,
-    marginBottom: 76,
     textAlign: "center",
   },
 });

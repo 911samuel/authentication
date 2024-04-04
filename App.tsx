@@ -13,9 +13,9 @@ export default function App() {
       source={require("./app/assets/background.jpg")}
     >
       <StatusBar barStyle="light-content" /> 
-      {/* <WelcomeScreen /> */}
+      <WelcomeScreen />
       {/* < SignUpScreen /> */}
-      < SIgnInScreen />
+      {/* < SIgnInScreen /> */}
     </ImageBackground>
   );
 }
