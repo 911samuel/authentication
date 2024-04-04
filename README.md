@@ -36,8 +36,24 @@
 
 ## ➤ Description
 
-  My motivation for this project stemmed from the need to understand and implement authentication workflows in React Native applications. Authentication is a fundamental aspect of many mobile apps, and I wanted to gain practical experience in handling user authentication securely and efficiently.I built this project to deepen my knowledge of authentication mechanisms such as email/password authentication and social media logins (e.g., Google, Facebook) within the context of a React Native mobile app. By building a practical authentication workflow, I aimed to enhance my skills in front-end development and user authentication practices.This project addresses the need for a robust and user-friendly authentication system in mobile applications. By implementing authentication features, users can securely create accounts, log in, and access personalized content or features within the app. This helps in enhancing user experience, maintaining data privacy, and preventing unauthorized access.Through this project, I learned:How to integrate authentication libraries or APIs in React Native projects.Best practices for user authentication, such as password hashing, token-based authentication, and secure storage of user credentials.Handling different authentication scenarios, including user registration, login, logout, password recovery, and social authentication.User interface design considerations for authentication screens, such as login/signup forms, validation, and error handling.Testing and debugging authentication flows to ensure reliability and security.Importance of implementing security measures like HTTPS, session management, and secure token handling to protect user data.
+ What was your motivation?
+My motivation for this project stemmed from the need to understand and implement authentication workflows in React Native applications. Authentication is a fundamental aspect of many mobile apps, and I wanted to gain practical experience in handling user authentication securely and efficiently.
 
+Why did you build this project?
+I built this project to deepen my knowledge of authentication mechanisms such as email/password authentication and social media logins (e.g., Google, Facebook) within the context of a React Native mobile app. By building a practical authentication workflow, I aimed to enhance my skills in front-end development and user authentication practices.
+
+What problem does it solve?
+This project addresses the need for a robust and user-friendly authentication system in mobile applications. By implementing authentication features, users can securely create accounts, log in, and access personalized content or features within the app. This helps in enhancing user experience, maintaining data privacy, and preventing unauthorized access.
+
+What did you learn?
+Through this project, I learned:
+
+How to integrate authentication libraries or APIs in React Native projects.
+Best practices for user authentication, such as password hashing, token-based authentication, and secure storage of user credentials.
+Handling different authentication scenarios, including user registration, login, logout, password recovery, and social authentication.
+User interface design considerations for authentication screens, such as login/signup forms, validation, and error handling.
+Testing and debugging authentication flows to ensure reliability and security.
+Importance of implementing security measures like HTTPS, session management, and secure token handling to protect user data.
 
 
 
@@ -48,20 +64,20 @@
 
 
 
-<p align="left">
-  <img alt="./app/assets/Welcome.jpeg" [Screenshot] src="./app/assets/Welcome.jpeg"><br>
-Mobile view of Home screen of the app
-</p>
-
-<p align="center">
-  <img alt="./app/assets/Signup.jpeg" [Screenshot] src="./app/assets/Signup.jpeg"><br>
-Mobile view of Signup screen of the app
-</p>
-
-<p align="right">
-  <img alt="./app/assets/Login.jpeg" [Screenshot] src="./app/assets/Login.jpeg"><br>
-Mobile view of Login screen of the app
-</p>
+<div style="display: flex; flex-direction: row;">
+  <div style="flex: 1;">
+    <img alt="./app/assets/Welcome.jpeg" src="./app/assets/Welcome.jpeg" style="width: 300px; height: 400px;"><br>
+    <p style="text-align: left;">Mobile view of Home screen of the app</p>
+  </div>
+  <div style="flex: 1;">
+    <img alt="./app/assets/Signup.jpeg" src="./app/assets/Signup.jpeg" style="width: 300px; height: 400px;"><br>
+    <p style="text-align: center;">Mobile view of Signup screen of the app</p>
+  </div>
+  <div style="flex: 1;">
+    <img alt="./app/assets/Login.jpeg" src="./app/assets/Login.jpeg" style="width: 300px; height: 400px;"><br>
+    <p style="text-align: right;">Mobile view of Login screen of the app</p>
+  </div>
+</div>
 
 
 
@@ -88,8 +104,28 @@ AUTHENTICATION WORK-FLOW is built with the following tools and libraries: <ul><l
 
 ## ➤ Usage
  
-1. Install the dependencies using 'npm install'.2. Start the development server with 'npm start'.3. Navigate to http://localhost:3000 in your browser to see the application.
+Usage Instructions:
+1. Install the dependencies using 'npm install'.
+2. Start the development server with 'npm start'.
+3. Navigate to http://localhost:3000 in your browser to see the application.
 
+Functionality Overview:
+- Login: Allows users to log in to their accounts.
+- Dashboard: Displays user data and statistics.
+- Settings: Provides options to customize user preferences.
+
+Code Examples:
+// Example code snippet demonstrating usage of a function
+const fetchData = async () => {
+  // Fetch data from API endpoint
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+  return data;
+};
+
+Usage Scenarios:
+- Scenario 1: User logs in and views their dashboard.
+- Scenario 2: User updates their profile settings.
 
 
 
@@ -98,8 +134,28 @@ AUTHENTICATION WORK-FLOW is built with the following tools and libraries: <ul><l
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#contribution)
 
 ## ➤ Contribution
- 
-Please enter contribution guidelines for your project:Contribution Guidelines:- Fork the repository and create a new branch for your contributions.- Follow the coding style and conventions specified in the project.- Write clear commit messages and comments to explain your changes.- Submit a pull request detailing the changes made and why they are beneficial.- Ensure your code passes all tests and does not introduce new issues.Issue Reporting:- Use descriptive titles and provide steps to reproduce the issue.- Include screenshots or error messages if applicable.- Check if the issue has already been reported before creating a new one.Feature Requests:- Describe the proposed feature or enhancement in detail.- Explain why the feature would be beneficial to the project.Code Reviews:- Participate in code reviews to provide feedback and suggestions to other contributors.- Be respectful and constructive in your comments and feedback.By following these guidelines, we can maintain a collaborative and high-quality codebase for everyone.
+
+ Contribution Guidelines:
+- Fork the repository and create a new branch for your contributions.
+- Follow the coding style and conventions specified in the project.
+- Write clear commit messages and comments to explain your changes.
+- Submit a pull request detailing the changes made and why they are beneficial.
+- Ensure your code passes all tests and does not introduce new issues.
+
+Issue Reporting:
+- Use descriptive titles and provide steps to reproduce the issue.
+- Include screenshots or error messages if applicable.
+- Check if the issue has already been reported before creating a new one.
+
+Feature Requests:
+- Describe the proposed feature or enhancement in detail.
+- Explain why the feature would be beneficial to the project.
+
+Code Reviews:
+- Participate in code reviews to provide feedback and suggestions to other contributors.
+- Be respectful and constructive in your comments and feedback.
+
+By following these guidelines, we can maintain a collaborative and high-quality codebase for everyone.
 
 
 
@@ -110,7 +166,17 @@ Please enter contribution guidelines for your project:Contribution Guidelines:- 
 
 ## ➤ Tests
  
-Please enter test instructions for your project:Test Instructions:1. Install testing dependencies using 'npm install --dev'.2. Run unit tests using 'npm test'.3. Verify that each component/module functions correctly under normal conditions.4. Test edge cases and boundary conditions to ensure robustness.5. Check for error handling and proper error messages.6. Test user interactions and interfaces for usability and accessibility.7. Perform integration tests to validate interactions between components/modules.8. Report any test failures or unexpected behavior using the project's issue tracker.By following these test instructions, we can ensure the quality and reliability of our project's functionality.
+Test Instructions:
+1. Install testing dependencies using 'npm install --dev'.
+2. Run unit tests using 'npm test'.
+3. Verify that each component/module functions correctly under normal conditions.
+4. Test edge cases and boundary conditions to ensure robustness.
+5. Check for error handling and proper error messages.
+6. Test user interactions and interfaces for usability and accessibility.
+7. Perform integration tests to validate interactions between components/modules.
+8. Report any test failures or unexpected behavior using the project's issue tracker.
+
+By following these test instructions, we can ensure the quality and reliability of our project's functionality.
 
 
 
